@@ -19,8 +19,8 @@
         }
         buttonHtml = '<span class="octicon octicon-git-branch-delete"></span> ' + (disabled ? 'Protected branch' : 'Delete branch');
       } else {
-        var wipTitleRegex = /[\[(^](do\s*n[o']?t\s*merge|wip|dnm)[\]):]/i;
-        var wipTagRegex = /(wip|do\s*not\s*merge|dnm)/i;
+        var wipTitleRegex = /[\[(^](do\s*n[o']?t\s*merge|review\s*only|wip|dnm)[\]):]/i;
+        var wipTagRegex = /(wip|do\s*not\s*merge|dnm|review\s*only)/i;
 
         var isWipTitle = wipTitleRegex.test(issueTitle);
         var isWipTaksList = $container.find('.timeline-comment:first input[type="checkbox"]:not(:checked)').length > 0;
